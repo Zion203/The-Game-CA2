@@ -1,8 +1,8 @@
-const click_me = document.getElementById("click-me")
+const click_me = document.getElementsByClassName("click-me")[0]
 var highscore_box=document.getElementById("HighScore-box")
-var close_button = document.getElementById("close-button")
+var close_button = document.getElementsByClassName("close-button")[0]
 var score = window.localStorage.getItem("score")
-var score_bar = document.getElementById("name")
+var score_bar = document.getElementsByClassName("name")[0]
 var user_array =JSON.parse(window.localStorage.getItem("users"))
 var score_list=document.getElementById("score-list")
 

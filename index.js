@@ -1,24 +1,31 @@
 var discription_box=document.getElementById("discriptions-box")
-const close_button = document.getElementById("close-button")
-const click_me = document.getElementById("click-me")
+const close_button = document.getElementsByClassName("close-button")[0]
+const click_me = document.getElementsByClassName("click-me")[0]
 var input_name =document.getElementById("name-input")
-const play_button =document.getElementById("button_play")
+const play_button =document.getElementsByClassName("button_play")[0]
 
 
 
 
 click_me.onclick =() =>{
     discription_box.style.visibility="visible"
+    click_music.pause()
+    click_music.currentTime=0
     click_music.play()
 }
 
 close_button.onclick = () =>{
     discription_box.style.visibility="hidden"
-     click_music.play()
+    click_music.pause()
+    click_music.currentTime=0
+    click_music.play()
+    
 }
 
 
 play_button.onclick =()=>{
+    click_music.pause()
+    click_music.currentTime=0
     click_music.play()
     let input_value = input_name.value
     let Error = document.getElementById("Error-pop")
@@ -41,8 +48,10 @@ play_button.onclick =()=>{
     }   
 }
 
+
+
+const click_music = new Audio("./assets/click.mp3")
+
 const Background_music = new Audio("./assets/Background.mp3")
 Background_music.play()
 Background_music.loop=true
-
-const click_music = new Audio("./assets/click.mp3")
