@@ -86,7 +86,7 @@ body{
     font-size: xx-large;
 }
 
-.button_play:hover,.click-me:hover,.button-style:hover{
+.button_play:hover,.click-me:hover,.button-style:hover,#button_confirm:hover{
     color: gray;
 }
 
