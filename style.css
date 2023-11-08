@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque&family=Handjet&family=Pixelify+Sans&family=Poppins:ital,wght@1,200&family=Roboto+Slab&family=Tilt+Neon&family=Tilt+Prism&display=swap');
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+body{
+    background-color: rgb(27, 26, 26);
+    color: white;
+    font-variant: small-caps;
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+.contents{
+    background-color: rgb(66, 65, 65);
+    height:60vh;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: space-around;
+    border: 3px solid gray;
+}
+.all-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+#discriptions-box{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:black;
+    opacity: 90%;
+    height:50vh;
+    width: 40%;
+    border-radius: 10px;
+    padding: 20px;
+    margin-left:30%;
+    margin-top: 10%;
+    visibility: hidden;
+
+}
+.button-style{
+    height: 50px;
+    width: 90px;
+    color: black;
+    font-size: large;
+    margin: 5px;
+    border:unset;
+    border-bottom: 4px gray solid;
+    border-right:4px gray solid ;
+    font-weight: bold;
+    margin-top: 30px;
+    cursor: pointer;
+
+}
+#click-me{
+    text-decoration: underline;
+    justify-self:end;
+    cursor: pointer;
+}
+#logo{
+    font-size: 75px;
+
+}
+#button_play{
+    background-color: black;
+    color: white;
+}
+#button_confirm{
+    background-color: black;
+    color: white;
+}
+#name-input{
+    width: 100%;
+    margin-top: 10px;
+    height: 30px;
+}
+#name{
+    font-size: xx-large;
+}
+
+#button_play:hover,#click-me:hover,.button-style:hover{
+    color: gray;
+}
+
+
+#game{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+#words-container{
+    border: white 2px solid;
+    padding: 10px;
+    font-size: xx-large;
+    color: white;
+
+}
+#hints{
+    width: 50%;
+    line-height: 20px;
+    font-size:medium;
+    font-weight: 900;
+}
+#answers{
+    width:50%;
+    height: 50px;
+    border: 2px gray solid;
+    border-radius: 10px;
+}
+#incorrect{
+    color: red;
+    text-align: center;
+    font-size: large;
+    visibility: hidden;
+}
+.b_color{
+    color: black;
+    font-size: large;
+    font-weight: 800;
+}
+
+#HighScore-box{
+    position: absolute;
+    display: flex;
+    font-size: xx-large;
+    flex-direction: column;
+    /* align-self: center; */
+    align-items:center;
+    background-color:black;
+    opacity: 90%;
+    /* height:50vh; */
+    width: 40%;
+    border-radius: 10px;
+    padding: 20px;
+    margin-left:30%;
+    margin-top: 10%;
+    visibility: hidden;
+}
+#GO{
+    font-size: 75px; 
+}
+#Error-pop{
+    font-size: medium;
+    color: red;
+    text-align: center;
+    visibility: hidden;
+}
+
+@media (max-width: 480px){
+    #logo{
+        font-size: x-large;
+    }
+    .contents{
+        width: 70%;
+    }
+    #name{
+        font-size: medium;
+    }
+    
+    #discriptions-box{
+        width: 70%;
+        font-size: x-small;
+        margin-top: 50%;
+        margin-left: 15%;
+    }
+    .contents{
+        font-size: smaller;
+    }
+    #HighScore-box{
+        width: 60%;
+        font-size: small;
+        margin:22%;
+    }
+
+}
+
