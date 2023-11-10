@@ -75,7 +75,7 @@ var index=0
 var score=0
 
 function RandomIndex(){
-    return Math.floor(Math.random()*60)
+    return Math.floor(Math.random()*62)
 }
 
 function jumble(word){
