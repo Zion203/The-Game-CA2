@@ -95,7 +95,6 @@ function insertion(){
     word.innerText=jumble(wordPairs[index][0])
     hint_paragraph.innerText=`${wordPairs[index][1]}`
     let score_points=seconds
-
     return score_points
 
 }
@@ -107,7 +106,6 @@ function checker(){
         score+=score_points
         incorrect_bar.style.visibility="hidden"
         seconds=30
-        console.log(score)
     }else{
         incorrect_bar.style.visibility="visible"
         seconds-=5
