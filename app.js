@@ -74,10 +74,13 @@ var seconds=30
 var index=0
 var score=0
 
+
+// generate a random index
 function RandomIndex(){
     return Math.floor(Math.random()*62)
 }
 
+// jumbles the word
 function jumble(word){
     const wordArray = word.split('');
     for (let i = wordArray.length - 1; i > 0; i--) {
@@ -90,15 +93,16 @@ function jumble(word){
 }
 
 
+// insert the updated values in to html page
 function insertion(){
     index=RandomIndex()
     word.innerText=jumble(wordPairs[index][0])
     hint_paragraph.innerText=`${wordPairs[index][1]}`
     let score_points=seconds
     return score_points
-
 }
 
+// it will check weather the answer is rigth or wrong
 function checker(){
     let value_input = answer_input.value
     if (value_input==wordPairs[index][0]){
@@ -112,16 +116,21 @@ function checker(){
     }
 }
 
+// click music
 confirm_button.onclick =()=>{
     click_music.play()
     checker()
     answer_input.value=""
 }
 
+
+// update timer
 function updateTimerDisplay(seconds){
     time_bar.innerText=`${seconds}s`
 }
 
+
+// creats timer and if times up it will go to gameover page
 function timer(){
     countdown = setInterval(function () {
         seconds--;
@@ -138,6 +147,7 @@ function timer(){
       }, 1000);
 }
 
+// click music
 reset_button.onclick = ()=>{
     click_music.play()
     seconds-=5
@@ -145,13 +155,13 @@ reset_button.onclick = ()=>{
     
 }
 
-
+// music 
 const Background_music = new Audio("./assets/Background.mp3")
 Background_music.play()
 Background_music.loop=true
 
 const click_music = new Audio("./assets/click.mp3")
 
-
+// calling the fuctions
 timer()
 insertion()

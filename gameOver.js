@@ -8,7 +8,7 @@ var score_list=document.getElementById("score-list")
 
 
 
-
+// leaderboard click
 click_me.onclick =() =>{
     highscore_box.style.visibility="visible"
     click_music.play()
@@ -19,18 +19,18 @@ close_button.onclick = () =>{
     click_music.play()
 }
 
+// score update
 score_bar.innerText=`Your Score : ${score}`
 
+// sorting the array
 user_array.sort((a, b) => b[1] - a[1])
 
+// updateing the leader board
 for(let i=0;i<user_array.length;i++){
-    console.log(i)
-    console.log(user_array[i][0])
-
     score_list.innerHTML+=`<li>${user_array[i][0]}..............${user_array[i][1]}</li>`
 }
 
-
+// music
 const Background_music = new Audio("./assets/Game-Over.mp3")
 Background_music.play()
 
